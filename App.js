@@ -37,8 +37,7 @@ async function runApp() {
         
         if (information) {
             const text = `Rango Actual: ${information.currenttierpatched} | MMR Actual: ${information.ranking_in_tier} RR | Ultimo RR: ${information.mmr_change_to_last_game} | Elo: ${information.elo}`;
-            console.log(text);
-            
+                        
             const textElement = document.getElementById('valorantText');
             if (textElement) {
                 textElement.innerText = text;
