@@ -14,7 +14,7 @@ app.get('/rango', async (req, res) => {
         const response = await fetch(url);
         const data = await response.json();
         const { currenttierpatched, ranking_in_tier, mmr_change_to_last_game, elo } = data.data;
-        const text = `Rango Actual: ${currenttierpatched} | MMR Actual: ${ranking_in_tier} RR | Ultimo RR: ${mmr_change_to_last_game} | Elo: ${elo}`;
+        const text = `Rango Actual: ${currenttierpatched} | RR Actual: ${ranking_in_tier} RR | Ultimo RR: ${mmr_change_to_last_game} | Elo: ${elo}`;
         res.send(text);
     } catch (error) {
         console.error('Error al obtener datos de la API:', error);

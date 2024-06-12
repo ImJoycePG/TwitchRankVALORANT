@@ -1,0 +1,61 @@
+<h1>English</h1>
+
+<h2>How to Use the Twitch Rank VALORANT Link</h2>
+
+<p>This link allows you to retrieve information about a VALORANT player's rank on Twitch.</p>
+
+<h3>Parameters:</h3>
+
+<ul>
+  <li><code>api_key</code>: Your API key obtained from <a href="https://github.com/Henrik-3/unofficial-valorant-api">Henrik Dev's VALORANT API</a>.</li>
+  <li><code>name</code>: The player's name.</li>
+  <li><code>tag</code>: The player's tag.</li>
+  <li><code>region</code>: The player's region (e.g., <code>latam</code>, <code>na</code>, <code>eu</code>).</li>
+</ul>
+
+<h3>Usage:</h3>
+
+<p>Replace the placeholders (<code>YOUR_API_KEY</code>, <code>PLAYER_NAME</code>, <code>PLAYER_TAG</code>, <code>REGION</code>) in the link with your actual API key and the player's information.</p>
+
+<p>Example:</p>
+
+<pre>
+https://twitchrankvalorant.glitch.me/rank?region=REGION&name=PLAYER_NAME&tag=PLAYER_TAG&api_key=YOUR_API_KEY
+</pre>
+
+<p>Replace <code>YOUR_API_KEY</code> with your actual API key, <code>PLAYER_NAME</code> with the player's name, <code>PLAYER_TAG</code> with the player's tag, and <code>REGION</code> with the player's region.</p>
+
+<h2>Objective</h2>
+
+<p>This was specifically created so that content creators can use it in their livestreams, as some chatbots like Nightbot currently have a character limit.</p>
+
+<h1>Español</h1>
+
+<h2>Cómo Usar el Enlace de Twitch Rank VALORANT</h2>
+
+<p>Este enlace te permite obtener información sobre el rango de un jugador de VALORANT en Twitch.</p>
+
+<h3>Parámetros:</h3>
+
+<ul>
+  <li><code>api_key</code>: Tu clave de API obtenida de la <a href="https://github.com/Henrik-3/unofficial-valorant-api">API de VALORANT de Henrik Dev</a>.</li>
+  <li><code>name</code>: El nombre del jugador.</li>
+  <li><code>tag</code>: La etiqueta del jugador.</li>
+  <li><code>region</code>: La región del jugador (por ejemplo, <code>latam</code>, <code>na</code>, <code>eu</code>).</li>
+</ul>
+
+<h3>Uso:</h3>
+
+<p>Reemplaza los marcadores de posición (<code>YOUR_API_KEY</code>, <code>PLAYER_NAME</code>, <code>PLAYER_TAG</code>, <code>REGION</code>) en el enlace con tu clave de API real y la información del jugador.</p>
+
+<p>Ejemplo:</p>
+
+<pre>
+https://twitchrankvalorant.glitch.me/rank?region=REGION&name=PLAYER_NAME&tag=PLAYER_TAG&api_key=YOUR_API_KEY
+</pre>
+
+<p>Reemplaza <code>YOUR_API_KEY</code> con tu clave de API real, <code>PLAYER_NAME</code> con el nombre del jugador, <code>PLAYER_TAG</code> con la etiqueta del jugador y <code>REGION</code> con la región del jugador.</p>
+
+<h2>Objetivo</h2>
+
+<p>Esto se creó especialmente para que los creadores de contenido puedan usarlo en sus transmisiones en vivo, ya que algunos chatbots como Nightbot actualmente tienen un límite de caracteres.</p>
