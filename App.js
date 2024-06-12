@@ -1,11 +1,37 @@
-const tokenUtil= require('./Utils/getToken');
-const jsonUtil = require('./Utils/getJSON');
+function getQueryParam(parameterName) {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    return urlParams.get(parameterName);
+}
+
+async function getToken() {
+    const token = getQueryParam('api_key');
+    const name = getQueryParam('name');
+    const tag = getQueryParam('tag');
+    const region = getQueryParam('region');
+    
+    return { token, name, tag, region };
+}
+
+async function getJSON(token, region, name, tag) {
+    const url = `https://api.henrikdev.xyz/valorant/v1/mmr/${region}/${name}/${tag}?api_key=${token}`;
+    
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+        
+        return data;
+    } catch (error) {
+        console.error('Error al obtener datos de la API:', error);
+        return null;
+    }
+}
 
 async function runApp() {
-    const { token, name, tag, region } = tokenUtil.getParams();
+    const { token, name, tag, region } = await getToken();
 
     if (token && name && tag && region) {
-        const json = await jsonUtil.getJSON(token, region, name, tag);
+        const json = await getJSON(token, region, name, tag);
         
         const information = extractInformation(json);
         
@@ -24,7 +50,6 @@ async function runApp() {
         console.log('Faltan parámetros en la URL.');
     }
 }
-
 
 function extractInformation(json) {
     if (!json || !json.data) {
