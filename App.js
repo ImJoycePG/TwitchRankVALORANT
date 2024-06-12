@@ -1,3 +1,4 @@
+// getToken.js
 function getQueryParam(parameterName) {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
@@ -13,6 +14,7 @@ async function getToken() {
     return { token, name, tag, region };
 }
 
+// getJSON.js
 async function getJSON(token, region, name, tag) {
     const url = `https://api.henrikdev.xyz/valorant/v1/mmr/${region}/${name}/${tag}?api_key=${token}`;
     
@@ -27,6 +29,7 @@ async function getJSON(token, region, name, tag) {
     }
 }
 
+// runApp.js
 async function runApp() {
     const { token, name, tag, region } = await getToken();
 
@@ -37,7 +40,7 @@ async function runApp() {
         
         if (information) {
             const text = `Rango Actual: ${information.currenttierpatched} | MMR Actual: ${information.ranking_in_tier} RR | Ultimo RR: ${information.mmr_change_to_last_game} | Elo: ${information.elo}`;
-                        
+            
             const textElement = document.getElementById('valorantText');
             if (textElement) {
                 textElement.innerText = text;
