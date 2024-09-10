@@ -1,0 +1,16 @@
+{
+  "name": "twitchrankvalorant",
+  "version": "1.0.0",
+  "description": "<h1>English</h1>",
+  "main": "App.js",
+  "scripts": {
+    "start": "node App.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.20.0",
+    "node-fetch": "^3.3.2"
+  }
+}

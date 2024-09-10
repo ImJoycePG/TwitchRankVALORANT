@@ -2,7 +2,7 @@ const express = require('express');
 const fetch = require('node-fetch');
 const app = express();
 
-app.get('/rango', async (req, res) => {
+app.get('/rank', async (req, res) => {
     const apiKey = req.query.api_key;
     const name = req.query.name;
     const tag = req.query.tag;
@@ -17,7 +17,6 @@ app.get('/rango', async (req, res) => {
         const text = `Rango Actual: ${currenttierpatched} | RR Actual: ${ranking_in_tier} RR | Ultimo RR: ${mmr_change_to_last_game} | Elo: ${elo}`;
         res.send(text);
     } catch (error) {
-        console.error('Error al obtener datos de la API:', error);
         res.status(500).send('Error al obtener datos de la API');
     }
 });
